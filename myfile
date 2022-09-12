@@ -1,0 +1,20 @@
+#This is my teraform file for Github
+
+terraform {
+  required_providers {
+    github = {
+      source = "integrations/github"
+      version = "4.31.0"
+    }
+  }
+}
+
+provider "github" {
+  token = "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"
+}
+
+resource "github_repository" "demo-github" {
+  name        = "demo-github"
+  description = "My Teraform codes"
+
+  visibility = "public"
